@@ -1,0 +1,46 @@
+/* Style the card */
+.cardss {
+    position: relative;
+    overflow: hidden; /* Ensure that overflowing content is hidden */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Ensure the image fills the card */
+.cardss img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out; /* Transition for image opacity and filter */
+}
+
+/* Add blur effect on hover */
+.cardss:hover img {
+    filter: blur(5px); /* Apply blur effect on hover */
+}
+
+/* Title and description styling */
+.cardss .content {
+    position: absolute;
+    bottom: -100%; /* Start position for text (hidden below the card) */
+    left: 0;
+    right: 0;
+    color: white; /* Change text color as needed */
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for text */
+}
+
+/* Show text on hover */
+.cardss:hover .content {
+    bottom: 0; /* Move text to the bottom of the card */
+    opacity: 1; /* Show text on hover */
+}
+
+/* Additional style for title */
+.cardss:hover .content h3 {
+    opacity: 1; /* Ensure the title is visible on hover */
+}
+
+.cardss:hover .content p {
+    opacity: 1; /* Ensure the description is visible on hover */
+}
