@@ -65,11 +65,12 @@ const TeamSection = () => {
             <div key={member.id} className="flex justify-center" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-once="true">
               <div className="bg-black shadow-xl border cursor-pointer mx-5 flex items-center rounded-lg p-5"> {/* Added flex layout */}
                 <figure className="mr-5"> {/* Right margin for spacing */}
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="object-cover h-24 w-24 rounded-full" // Adjusted size for circular image
-                  />
+                <img
+  src={member.image}
+  alt={member.name}
+  className="object-cover h-24 w-24 rounded-[50%]" // Custom border-radius of 50%
+/>
+
                 </figure>
                 <div className="cards-body"> {/* Removed padding for better spacing */}
                   <h3 className="cards-title text-2xl font-semibold text-white">{member.name}</h3>
